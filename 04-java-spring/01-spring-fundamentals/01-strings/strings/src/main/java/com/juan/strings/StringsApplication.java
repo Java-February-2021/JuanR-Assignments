@@ -1,14 +1,13 @@
-package com.matthew.springdemo;
+package com.juan.strings;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class SpringDemoApplication {
-	// Entry Point Method
+public class StringsApplication {
+
 	public static void main(String[] args) {
-		SpringApplication.run(SpringDemoApplication.class, args);
+		SpringApplication.run(StringsApplication.class, args);
 	}
-	
+
 }
