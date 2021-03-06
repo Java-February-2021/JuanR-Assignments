@@ -21,6 +21,11 @@ public class BookService {
 		return  this.bRepo.findAll();
 	}
 	
+	// Get Single Book
+	public Book getOneBook(Long id) {
+		return this.bRepo.findById(id).orElse(null);
+	}
+	
 	// Create
 	public Book createBook(Book newBook) {
 		return this.bRepo.save(newBook);
@@ -30,4 +35,13 @@ public class BookService {
 	public Book getSingleBook(Long id) {
 		return this.bRepo.findById(id).orElse(null);
 	}
-}
+	
+	// Update
+	public Book updateBook(Book updatedBook) {
+		return this.bRepo.save(updatedBook);
+	}
+	// Delete
+		public void deleteBook(Long id) {
+			this.bRepo.deleteById(id);
+		}
+	}
