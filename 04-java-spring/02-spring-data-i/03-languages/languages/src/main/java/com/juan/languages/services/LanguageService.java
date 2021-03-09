@@ -28,7 +28,7 @@ public class LanguageService {
 		return this.lRepo.save(newLanguage);
 	}
 	public Language createLanguage(String name, String creator, int version) { 
-		Language newLanguage = new Language(name, creator, version);
+		Language newLanguage = new Language(); 
 		return this.lRepo.save(newLanguage);
 	}
 	// Delete
