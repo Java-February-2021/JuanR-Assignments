@@ -9,13 +9,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>New License</h1>
-<h3>Person<c:forEach items="${users}" var="user">
+<table class="dark table-dark">
+<thead>
 <tr>
-	<td>${user.firstName} ${user.lastName}</td>
+<td>Name</td>
+<td>state</td>
+<td>exp</td>
 </tr>
-</c:forEach></h3>
-<h3>State</h3>
-<h3>Expiration Date </h3>
+</thead>
+<tbody>
+<tr>
+<select path="user">
+<c:forEach items="${users}" var="user">
+<option value="${user.id}">${user.firstName}</option>
+</c:forEach>
+</select>
+</tbody>
+</table>
 </body>
 </html>

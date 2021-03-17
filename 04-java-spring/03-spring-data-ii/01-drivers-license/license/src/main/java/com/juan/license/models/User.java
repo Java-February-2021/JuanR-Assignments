@@ -26,6 +26,16 @@ public class User {
 	}
 
 
+	public License getLicense() {
+		return license;
+	}
+
+
+	public void setLicense(License license) {
+		this.license = license;
+	}
+
+
 	public User(Long id, String firstName, String lastName) {
 		this.id = id;
 		this.firstName = firstName;

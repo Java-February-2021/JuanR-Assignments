@@ -1,5 +1,7 @@
 package com.juan.license.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.juan.license.models.User;
@@ -11,6 +13,10 @@ public class UserService {
 	
 	public UserService(UserRepository repo) {
 		this.uRepo = repo;
+	}
+	// Get all users
+	public List<User> getAllUsers() {
+		return this.uRepo.findAll();
 	}
 	
 	// Get one user

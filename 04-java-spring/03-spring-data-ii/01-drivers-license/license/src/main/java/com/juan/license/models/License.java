@@ -1,5 +1,7 @@
 package com.juan.license.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -21,9 +23,20 @@ public class License {
 	private int expDate;
 	
 	@OneToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id")
+	@JoinColumn(name="user_id") // Foreign Key
 	private User user;
 	
+	
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+
 	public License() {
 	}
 

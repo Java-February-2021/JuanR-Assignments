@@ -1,5 +1,7 @@
 package com.juan.license.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -21,8 +23,10 @@ public class LicenseController {
 	
 	
 	@PostMapping("")
-	public String newLicense(@ModelAttribute("user")User user, BindingResult result) {
+	public String newLicense(@Valid @ModelAttribute("user")User user, BindingResult result) {
 		this.uService.createUser(user);
 		return "newLicense.jsp";
 	}
+
+
 }
